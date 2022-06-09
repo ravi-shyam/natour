@@ -58,6 +58,9 @@ Dark green: #28b485
     font-size: 60px;
     font-weight: 400;
     letter-spacing: 35px;
+    animation-name: moveFromLeft;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
 }
 
 .heading-primary-sub{
@@ -65,4 +68,29 @@ Dark green: #28b485
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 15px;
+    animation: moveFromRight 1.5s ease-out;
+}
+
+@keyframes moveFromLeft{
+    0%{
+        transform: translateX(-100px);
+    }
+    80%{
+        transform: translateX(10px)
+    }
+    100%{
+        transform: translateX(0px)
+    }
+}
+
+@keyframes moveFromRight{
+    0%{
+        transform: translateX(100px);
+    }
+    80%{
+        transform: translateX(-10px)
+    }
+    100%{
+        transform: translateX(0px)
+    }
 }
